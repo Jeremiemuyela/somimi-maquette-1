@@ -1,0 +1,141 @@
+/* SOMIMI — Maquette 1 Institutionnelle
+   Architecture découplée : pas de logique métier.
+   Évolution prévue : comptes, GED multilingue, fournisseurs, ERP Odoo. */
+
+:root {
+  --navy: #0b1f3a;
+  --petroleum: #163a5f;
+  --blue: #1e4d7b;
+  --bronze: #b08d57;
+  --bronze-deep: #7a6238;
+  --ivory: #f6f3ec;
+  --paper: #ebe6dc;
+  --white: #ffffff;
+  --ink: #1c1915;
+  --muted: #5a564e;
+  --line: #d6d0c4;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  background: var(--ivory);
+  color: var(--ink);
+}
+
+h1, h2, h3, .font-serif {
+  font-family: Fraunces, "Times New Roman", serif;
+  font-optical-sizing: auto;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 80;
+  background: var(--navy);
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+.skip-link:focus { top: 1rem; }
+
+.site-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand-mark {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--navy);
+  color: var(--bronze);
+  display: grid;
+  place-items: center;
+  font-family: Fraunces, serif;
+  font-weight: 600;
+}
+
+.nav-link {
+  color: var(--ink);
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
+}
+.nav-link:hover,
+.nav-link[aria-current="page"] {
+  color: var(--blue);
+}
+
+.nav-link[aria-current="page"]::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin-top: 0.35rem;
+  background: var(--bronze);
+}
+
+.btn-navy {
+  background: var(--navy);
+  color: #fff;
+}
+.btn-navy:hover { background: var(--petroleum); }
+.btn-bronze {
+  background: transparent;
+  color: var(--bronze-deep);
+  border: 1px solid var(--bronze);
+}
+.btn-bronze:hover { background: var(--paper); }
+
+.hero {
+  min-height: 100vh;
+  background-color: var(--navy);
+  background-image: linear-gradient(180deg, rgba(11, 31, 58, 0.72), rgba(11, 31, 58, 0.86)), var(--hero);
+  background-size: cover;
+  background-position: center;
+}
+
+.rule-bronze {
+  width: 3.5rem;
+  height: 1px;
+  background: var(--bronze);
+}
+
+.section-kicker {
+  color: var(--bronze-deep);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.site-footer {
+  background: var(--navy);
+  color: #d8d2c6;
+}
+
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 31, 58, 0.92);
+  display: none;
+  z-index: 70;
+}
+.lightbox.is-open { display: grid; }
+
+.org-line { background: var(--line); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
