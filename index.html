@@ -41,35 +41,37 @@
 </header>
 
 <main id="contenu">
-  <div class="home-blue">
-  <section class="hero relative flex items-center overflow-hidden">
-    <img src="images/hero-placeholder.jpg" alt="Paysage minier — visuel de substitution en attendant les photographies officielles de SOMIMI" width="1920" height="1280" class="absolute inset-0 h-full w-full object-cover">
-    <div class="absolute inset-0 bg-gradient-to-t from-[#0B1F3A] via-[#0B1F3A]/70 to-[#0B1F3A]/40"></div>
-    <div class="relative z-10 mx-auto max-w-6xl px-6 py-8 md:py-10 text-white w-full">
-      <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-        <div class="lg:col-span-5">
-          <h1 class="font-serif max-w-sm text-2xl md:text-3xl leading-snug">Pour une exploitation responsable et rationnelle des minerais de 3T (étain, tantale et tungstène).</h1>
-          <div class="rule-bronze my-4"></div>
-          <p class="max-w-sm text-sm md:text-base text-white/75 leading-relaxed">La Société Minière de Mitwaba, SOMIMI SARL en sigle, est une société minière de droit congolais qui exerce ses activités dans le secteur de Mitwaba.</p>
-          <div class="mt-5 flex flex-wrap gap-3">
-            <a href="societe.html" class="btn-navy border border-white/20 px-5 py-2 text-sm">Découvrir la société</a>
-            <a href="activites.html" class="btn-bronze px-5 py-2 text-sm text-white border-bronze">Voir les titres miniers</a>
-          </div>
+  <section class="hero-home" aria-label="Présentation">
+    <div class="hero-home__inner">
+      <div class="hero-home__copy">
+        <h1 class="hero-home__title">
+          Pour une exploitation<br>
+          responsable et<br>
+          rationnelle des<br>
+          minerais de 3T<br>
+          (étain, tantale et<br>
+          tungstène).
+        </h1>
+        <div class="hero-home__rule" aria-hidden="true"></div>
+        <p class="hero-home__lead">La Société Minière de Mitwaba, SOMIMI SARL en sigle, est une société minière de droit congolais qui exerce ses activités dans le secteur de Mitwaba.</p>
+        <div class="hero-home__actions">
+          <a href="societe.html" class="hero-home__btn hero-home__btn--primary">Découvrir la société</a>
+          <a href="activites.html" class="hero-home__btn hero-home__btn--ghost">Voir les titres miniers</a>
         </div>
-        <div class="lg:col-span-7 grid grid-cols-3 gap-3 md:gap-5 items-end">
-          <figure class="mineral">
-            <img src="images/echantillon-etain.png" alt="Échantillon d’étain" width="800" height="800">
-            <figcaption>Étain</figcaption>
-          </figure>
-          <figure class="mineral">
-            <img src="images/echantillon-tantale.png" alt="Échantillon de tantale" width="800" height="800">
-            <figcaption>Tantale</figcaption>
-          </figure>
-          <figure class="mineral">
-            <img src="images/echantillon-tungstene.png" alt="Échantillon de tungstène" width="800" height="800">
-            <figcaption>Tungstène</figcaption>
-          </figure>
-        </div>
+      </div>
+      <div class="hero-home__minerals">
+        <figure class="mineral">
+          <img src="images/echantillon-etain.png" alt="Cassitérite — échantillon d’étain" width="800" height="800">
+          <figcaption>Étain</figcaption>
+        </figure>
+        <figure class="mineral mineral--featured">
+          <img src="images/echantillon-tantale.png" alt="Coltan — échantillon de tantale" width="800" height="800">
+          <figcaption>Tantale</figcaption>
+        </figure>
+        <figure class="mineral">
+          <img src="images/echantillon-tungstene.png" alt="Wolframite — échantillon de tungstène" width="800" height="800">
+          <figcaption>Tungstène</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -81,7 +83,6 @@
       <div><p class="font-serif text-3xl">70 / 30</p><p class="text-sm text-white/70">SHENG JI / COMINIERE</p></div>
     </div>
   </section>
-  </div>
   <section class="mx-auto max-w-6xl px-6 py-20 grid md:grid-cols-2 gap-14 items-center">
     <div>
       <p class="section-kicker">La société</p>
