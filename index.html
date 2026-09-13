@@ -42,7 +42,7 @@
 
 <main id="contenu">
   <section class="hero-home" aria-label="Présentation">
-    <div class="hero-home__inner">
+    <div class="hero-home__shell">
       <div class="hero-home__copy">
         <h1 class="hero-home__title">
           Pour une exploitation<br>
@@ -59,22 +59,23 @@
           <a href="activites.html" class="hero-home__btn hero-home__btn--ghost">Voir les titres miniers</a>
         </div>
       </div>
-      <div class="hero-home__minerals">
+      <div class="hero-home__minerals" role="group" aria-label="Échantillons de minerais 3T">
         <figure class="mineral">
-          <img src="images/echantillon-etain.png" alt="Cassitérite — échantillon d’étain" width="800" height="800">
+          <img src="images/echantillon-etain.png" alt="Cassitérite — échantillon d’étain" width="800" height="800" decoding="async">
           <figcaption>Étain</figcaption>
         </figure>
         <figure class="mineral mineral--featured">
-          <img src="images/echantillon-tantale.png" alt="Coltan — échantillon de tantale" width="800" height="800">
+          <img src="images/echantillon-tantale.png" alt="Coltan — échantillon de tantale" width="800" height="800" decoding="async">
           <figcaption>Tantale</figcaption>
         </figure>
         <figure class="mineral">
-          <img src="images/echantillon-tungstene.png" alt="Wolframite — échantillon de tungstène" width="800" height="800">
+          <img src="images/echantillon-tungstene.png" alt="Wolframite — échantillon de tungstène" width="800" height="800" decoding="async">
           <figcaption>Tungstène</figcaption>
         </figure>
       </div>
     </div>
   </section>
+
   <section class="bg-navy text-white">
     <div class="mx-auto max-w-6xl px-6 py-5 grid grid-cols-2 md:grid-cols-4 gap-5">
       <div><p class="font-serif text-3xl">4</p><p class="text-sm text-white/70">Titres miniers</p></div>

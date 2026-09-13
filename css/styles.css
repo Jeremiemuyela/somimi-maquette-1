@@ -54,91 +54,92 @@ h1, h2, h3, .font-serif {
 }
 
 .hero-home {
-  position: relative;
   width: 100%;
-  min-height: 700px;
-  height: clamp(700px, 78vh, 800px);
+  min-height: 720px;
+  height: 720px;
   display: flex;
-  align-items: stretch;
-  overflow: hidden;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   background:
-    radial-gradient(ellipse 80% 60% at 70% 55%, rgba(22, 58, 95, 0.45), transparent 70%),
-    linear-gradient(160deg, #0b1f3a 0%, #102946 45%, #0a1a30 100%);
+    radial-gradient(ellipse 70% 55% at 72% 58%, rgba(22, 58, 95, 0.5), transparent 68%),
+    linear-gradient(165deg, #0b1f3a 0%, #123153 48%, #0a1a30 100%);
 }
 
-.hero-home__inner {
-  display: grid;
-  grid-template-columns: 42% 58%;
+.hero-home__shell {
   width: 100%;
-  height: 100%;
-  min-height: inherit;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: 43% 57%;
+  align-items: center;
+  column-gap: 1.5rem;
+  box-sizing: border-box;
 }
 
 .hero-home__copy {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: clamp(2rem, 9vw, 7.5rem);
-  padding-right: 1.5rem;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-left: 8px;
+  padding-right: 12px;
 }
 
 .hero-home__title {
   max-width: 500px;
   margin: 0;
   font-family: Fraunces, "Times New Roman", serif;
-  font-size: clamp(2.4rem, 3.6vw, 3.5rem);
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: -0.01em;
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.015em;
   color: #fff;
 }
 
 .hero-home__rule {
   width: 56px;
-  height: 1px;
-  margin-top: 26px;
-  margin-bottom: 24px;
+  height: 1.5px;
+  margin-top: 25px;
+  margin-bottom: 0;
   background: var(--bronze);
 }
 
 .hero-home__lead {
   max-width: 480px;
-  margin: 0;
+  margin: 24px 0 0;
   font-family: "Source Sans 3", system-ui, sans-serif;
-  font-size: 1.0625rem;
+  font-size: 16.5px;
   line-height: 1.5;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .hero-home__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  margin-top: 32px;
+  margin-top: 30px;
 }
 
 .hero-home__btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 180px;
-  height: 54px;
-  padding: 0 1.25rem;
+  height: 52px;
+  padding: 0 24px;
   font-family: "Source Sans 3", system-ui, sans-serif;
-  font-size: 0.9375rem;
+  font-size: 14.5px;
   font-weight: 500;
   text-decoration: none;
+  white-space: nowrap;
   transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .hero-home__btn--primary {
-  background: var(--navy);
+  background: rgba(11, 31, 58, 0.85);
   color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .hero-home__btn--primary:hover {
@@ -152,7 +153,7 @@ h1, h2, h3, .font-serif {
 }
 
 .hero-home__btn--ghost:hover {
-  background: rgba(176, 141, 87, 0.12);
+  background: rgba(176, 141, 87, 0.14);
 }
 
 .hero-home__minerals {
@@ -160,53 +161,54 @@ h1, h2, h3, .font-serif {
   align-items: flex-end;
   justify-content: center;
   gap: 30px;
-  padding: 0 4% 11% 2%;
-  min-height: 0;
+  padding-top: 2.5rem;
+  min-width: 0;
 }
 
 .mineral {
   margin: 0;
-  width: 200px;
-  max-width: 28%;
+  flex: 0 0 auto;
+  width: 190px;
   text-align: center;
   background: transparent;
 }
 
 .mineral--featured {
-  width: 230px;
-  max-width: 32%;
+  width: 220px;
 }
 
 .mineral img {
   display: block;
   width: 100%;
-  height: auto;
-  max-height: 210px;
+  height: 185px;
   object-fit: contain;
   background: transparent;
-  filter: drop-shadow(0 14px 10px rgba(0, 0, 0, 0.45));
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  filter: drop-shadow(0 16px 8px rgba(0, 0, 0, 0.4));
 }
 
 .mineral--featured img {
-  max-height: 230px;
+  height: 210px;
 }
 
 .mineral figcaption {
-  margin-top: 20px;
+  margin-top: 18px;
   color: #fff;
   font-family: "Source Sans 3", system-ui, sans-serif;
-  font-size: 1.125rem;
+  font-size: 17px;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
 }
 
 .mineral figcaption::after {
   content: "";
   display: block;
-  width: 24px;
-  height: 1px;
-  margin: 0.45rem auto 0;
+  width: 26px;
+  height: 1.5px;
+  margin: 8px auto 0;
   background: var(--bronze);
 }
 
@@ -282,55 +284,59 @@ h1, h2, h3, .font-serif {
   .hero-home {
     height: auto;
     min-height: 0;
+    padding: 3rem 0 2.5rem;
   }
 
-  .hero-home__inner {
+  .hero-home__shell {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .hero-home__copy {
-    padding-left: clamp(1.5rem, 6vw, 3rem);
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding: 0 32px;
   }
 
   .hero-home__title {
-    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-size: 40px;
   }
 
   .mineral {
-    width: 160px;
+    width: 150px;
   }
 
   .mineral--featured {
-    width: 185px;
+    width: 175px;
   }
 
   .mineral img {
-    max-height: 170px;
+    height: 155px;
   }
 
   .mineral--featured img {
-    max-height: 190px;
+    height: 175px;
   }
 
   .hero-home__minerals {
     gap: 22px;
-    padding-bottom: 8%;
+    padding-top: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
-  .hero-home__inner {
+  .hero-home {
+    height: auto;
+    min-height: 0;
+    padding: 2.25rem 0 2rem;
+  }
+
+  .hero-home__shell {
     grid-template-columns: 1fr;
+    padding: 0 24px;
+    row-gap: 2rem;
   }
 
   .hero-home__copy {
-    padding: 2.5rem 1.5rem 1.5rem;
+    padding-left: 0;
   }
 
   .hero-home__title {
-    font-size: 2rem;
+    font-size: 34px;
     line-height: 1.05;
   }
 
@@ -339,7 +345,6 @@ h1, h2, h3, .font-serif {
   }
 
   .hero-home__btn {
-    min-width: 0;
     flex: 1 1 auto;
   }
 
@@ -347,7 +352,7 @@ h1, h2, h3, .font-serif {
     justify-content: center;
     flex-wrap: wrap;
     gap: 1.25rem 1.5rem;
-    padding: 0.5rem 1.25rem 2.5rem;
+    padding-top: 0.25rem;
   }
 
   .mineral,
@@ -357,9 +362,15 @@ h1, h2, h3, .font-serif {
     max-width: 160px;
   }
 
+  .mineral img,
+  .mineral--featured img {
+    height: 140px;
+  }
+
   .mineral figcaption {
-    font-size: 0.85rem;
-    margin-top: 0.85rem;
+    font-size: 14px;
+    margin-top: 14px;
+    letter-spacing: 0.16em;
   }
 }
 
