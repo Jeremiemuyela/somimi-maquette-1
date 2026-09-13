@@ -54,6 +54,7 @@ h1, h2, h3, .font-serif {
 }
 
 .hero-home {
+  position: relative;
   width: 100%;
   min-height: 720px;
   height: 720px;
@@ -61,24 +62,40 @@ h1, h2, h3, .font-serif {
   align-items: center;
   justify-content: center;
   color: #fff;
+  overflow: hidden;
+  isolation: isolate;
   background-color: #0b1f3a;
   background-image:
-    radial-gradient(ellipse 55% 45% at 18% 28%, rgba(7, 16, 28, 0.55), transparent 70%),
-    radial-gradient(ellipse 70% 60% at 78% 62%, rgba(22, 58, 95, 0.28), transparent 72%),
-    radial-gradient(ellipse 90% 40% at 50% 100%, rgba(11, 31, 58, 0.95), transparent 55%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.04 0 0 0 0 0.08 0 0 0 0 0.12 0 0 0 0.28 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
     linear-gradient(
       180deg,
-      #071422 0%,
-      #0a1c33 38%,
-      #0b1f3a 78%,
+      rgba(6, 12, 22, 0.55) 0%,
+      rgba(11, 31, 58, 0.18) 42%,
+      rgba(11, 31, 58, 0.72) 82%,
       #0b1f3a 100%
-    );
-  background-repeat: no-repeat, no-repeat, no-repeat, repeat, no-repeat;
-  background-size: auto, auto, auto, 280px 280px, auto;
+    ),
+    radial-gradient(ellipse 70% 55% at 72% 58%, rgba(255, 255, 255, 0.045), transparent 62%),
+    radial-gradient(ellipse 50% 40% at 22% 30%, rgba(5, 10, 18, 0.45), transparent 70%),
+    url("images/hero-surface.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-home::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.03 0 0 0 0 0.06 0 0 0 0 0.1 0 0 0 0.22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.55;
+  mix-blend-mode: soft-light;
 }
 
 .hero-home__shell {
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 1240px;
   margin: 0 auto;
@@ -91,11 +108,21 @@ h1, h2, h3, .font-serif {
 }
 
 .hero-home__copy {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 8px;
   padding-right: 12px;
+}
+
+.hero-home__copy::before {
+  content: "";
+  position: absolute;
+  inset: -1.5rem -2rem -1rem -2.5rem;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 30% 40%, rgba(8, 16, 28, 0.55) 0%, rgba(8, 16, 28, 0.18) 55%, transparent 78%);
 }
 
 .hero-home__title {
@@ -189,7 +216,17 @@ h1, h2, h3, .font-serif {
   width: 220px;
 }
 
-.mineral img {
+.mineral__stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.mineral__stone {
+  position: relative;
+  z-index: 2;
   display: block;
   width: 100%;
   height: 185px;
@@ -197,16 +234,67 @@ h1, h2, h3, .font-serif {
   background: transparent;
   border: 0;
   outline: none;
-  box-shadow: none;
-  filter: drop-shadow(0 16px 8px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.85)) drop-shadow(0 14px 12px rgba(0, 0, 0, 0.45));
 }
 
-.mineral--featured img {
+.mineral--featured .mineral__stone {
   height: 210px;
 }
 
+.mineral__reflect {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 92%;
+  height: 68px;
+  margin-top: -6px;
+  overflow: hidden;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.18) 38%, transparent 92%);
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.18) 38%, transparent 92%);
+}
+
+.mineral--featured .mineral__reflect {
+  height: 76px;
+}
+
+.mineral__reflect img {
+  display: block;
+  width: 100%;
+  height: 185px;
+  object-fit: contain;
+  transform: scaleY(-1);
+  opacity: 0.38;
+  filter: blur(2.6px) brightness(0.62) contrast(0.92);
+  background: transparent;
+  border: 0;
+}
+
+.mineral--featured .mineral__reflect img {
+  height: 210px;
+}
+
+.mineral__stage::after {
+  content: "";
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  bottom: 58px;
+  height: 14px;
+  z-index: 0;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.18) 55%, transparent 75%);
+  pointer-events: none;
+}
+
+.mineral--featured .mineral__stage::after {
+  bottom: 66px;
+}
+
 .mineral figcaption {
-  margin-top: 18px;
+  position: relative;
+  z-index: 2;
+  margin-top: 10px;
   color: #fff;
   font-family: "Source Sans 3", system-ui, sans-serif;
   font-size: 17px;
@@ -316,12 +404,36 @@ h1, h2, h3, .font-serif {
     width: 175px;
   }
 
-  .mineral img {
+  .mineral__stone {
     height: 155px;
   }
 
-  .mineral--featured img {
+  .mineral--featured .mineral__stone {
     height: 175px;
+  }
+
+  .mineral__reflect {
+    height: 56px;
+  }
+
+  .mineral--featured .mineral__reflect {
+    height: 62px;
+  }
+
+  .mineral__reflect img {
+    height: 155px;
+  }
+
+  .mineral--featured .mineral__reflect img {
+    height: 175px;
+  }
+
+  .mineral__stage::after {
+    bottom: 48px;
+  }
+
+  .mineral--featured .mineral__stage::after {
+    bottom: 54px;
   }
 
   .hero-home__minerals {
@@ -374,9 +486,24 @@ h1, h2, h3, .font-serif {
     max-width: 160px;
   }
 
-  .mineral img,
-  .mineral--featured img {
+  .mineral__stone,
+  .mineral--featured .mineral__stone {
     height: 140px;
+  }
+
+  .mineral__reflect,
+  .mineral--featured .mineral__reflect {
+    height: 48px;
+  }
+
+  .mineral__reflect img,
+  .mineral--featured .mineral__reflect img {
+    height: 140px;
+  }
+
+  .mineral__stage::after,
+  .mineral--featured .mineral__stage::after {
+    bottom: 42px;
   }
 
   .mineral figcaption {
