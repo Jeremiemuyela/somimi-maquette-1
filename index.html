@@ -25,6 +25,7 @@
 <header class="site-header sticky top-0 z-40">
   <div class="mx-auto max-w-6xl px-6 h-18 py-4 flex items-center justify-between gap-6">
     <a href="index.html" class="flex items-center gap-3">
+      <img class="site-logo" src="images/logo-somimi.svg" alt="Logo SOMIMI" width="56" height="56">
       <span>
         <span class="block font-serif text-lg leading-none text-navy">SOMIMI</span>
         <span class="block text-[0.68rem] uppercase tracking-[0.16em] text-muted">Société Minière de Mitwaba</span>
@@ -41,26 +42,37 @@
 
 <main id="contenu">
   <div class="home-blue">
-  <section class="hero relative flex items-center overflow-hidden">
-    <img src="images/hero-placeholder.jpg" alt="Paysage minier — visuel de substitution en attendant les photographies officielles de SOMIMI" width="1920" height="1280" class="absolute inset-0 h-full w-full object-cover">
-    <div class="absolute inset-0 bg-gradient-to-t from-[#0B1F3A] via-[#0B1F3A]/55 to-[#0B1F3A]/20"></div>
-    <div class="relative z-10 mx-auto max-w-6xl px-6 py-8 text-white w-full">
-      <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <h1 class="font-serif max-w-3xl text-4xl md:text-6xl leading-tight">Pour une exploitation responsable et rationnelle des minerais de 3T (étain, tantale et tungstène).</h1>
-          <div class="rule-bronze my-6"></div>
-          <p class="max-w-xl text-lg text-white/85">La Société Minière de Mitwaba, SOMIMI SARL en sigle, est une société minière de droit congolais qui exerce ses activités dans le secteur de Mitwaba.</p>
-          <div class="mt-8 flex flex-wrap gap-4">
-            <a href="societe.html" class="btn-navy border border-white/20 px-6 py-3">Découvrir la société</a>
-            <a href="activites.html" class="btn-bronze px-6 py-3 text-white border-bronze">Voir les titres miniers</a>
+  <section class="hero relative flex items-center">
+    <div class="relative z-10 mx-auto max-w-6xl px-6 py-8 md:py-10 text-white w-full">
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        <div class="lg:col-span-5">
+          <h1 class="font-serif max-w-sm text-2xl md:text-3xl leading-snug">Pour une exploitation responsable et rationnelle des minerais de 3T (étain, tantale et tungstène).</h1>
+          <div class="rule-bronze my-4"></div>
+          <p class="max-w-sm text-sm md:text-base text-white/75 leading-relaxed">La Société Minière de Mitwaba, SOMIMI SARL en sigle, est une société minière de droit congolais qui exerce ses activités dans le secteur de Mitwaba.</p>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="societe.html" class="btn-navy border border-white/20 px-5 py-2 text-sm">Découvrir la société</a>
+            <a href="activites.html" class="btn-bronze px-5 py-2 text-sm text-white border-bronze">Voir les titres miniers</a>
           </div>
         </div>
-        <img src="images/echantillons-3t.jpg" alt="Échantillons d’étain, de tantale et de tungstène" width="1200" height="900" class="w-full h-56 md:h-72 object-cover border border-white/15">
+        <div class="lg:col-span-7 grid grid-cols-3 gap-4 md:gap-6">
+          <figure class="mineral">
+            <img src="images/echantillon-etain.jpg" alt="Échantillon d’étain" width="800" height="800">
+            <figcaption>Étain</figcaption>
+          </figure>
+          <figure class="mineral">
+            <img src="images/echantillon-tantale.jpg" alt="Échantillon de tantale" width="800" height="800">
+            <figcaption>Tantale</figcaption>
+          </figure>
+          <figure class="mineral">
+            <img src="images/echantillon-tungstene.jpg" alt="Échantillon de tungstène" width="800" height="800">
+            <figcaption>Tungstène</figcaption>
+          </figure>
+        </div>
       </div>
     </div>
   </section>
   <section class="bg-navy text-white">
-    <div class="mx-auto max-w-6xl px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+    <div class="mx-auto max-w-6xl px-6 py-5 grid grid-cols-2 md:grid-cols-4 gap-5">
       <div><p class="font-serif text-3xl">4</p><p class="text-sm text-white/70">Titres miniers</p></div>
       <div><p class="font-serif text-3xl">388,24 km²</p><p class="text-sm text-white/70">Superficie approximative</p></div>
       <div><p class="font-serif text-3xl">2024</p><p class="text-sm text-white/70">Année de constitution</p></div>
