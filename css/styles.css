@@ -46,11 +46,27 @@ h1, h2, h3, .font-serif {
 }
 
 .site-logo {
-  width: 3rem;
-  height: 3rem;
+  width: 3.5rem;
+  height: 3.5rem;
   display: block;
   flex-shrink: 0;
   object-fit: contain;
+}
+
+.logo-hero {
+  width: min(16rem, 72vw);
+  height: min(16rem, 72vw);
+  display: block;
+  object-fit: contain;
+}
+
+.logo-hero-frame {
+  display: grid;
+  place-items: center;
+  width: min(18rem, 80vw);
+  height: min(18rem, 80vw);
+  background: #fff;
+  margin-bottom: 1.75rem;
 }
 
 .nav-link {
