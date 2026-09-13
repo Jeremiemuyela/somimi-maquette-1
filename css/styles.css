@@ -53,20 +53,11 @@ h1, h2, h3, .font-serif {
   object-fit: contain;
 }
 
-.logo-hero {
-  width: min(16rem, 72vw);
-  height: min(16rem, 72vw);
-  display: block;
-  object-fit: contain;
-}
-
-.logo-hero-frame {
-  display: grid;
-  place-items: center;
-  width: min(18rem, 80vw);
-  height: min(18rem, 80vw);
-  background: #fff;
-  margin-bottom: 1.75rem;
+.home-blue {
+  min-height: calc(100vh - 4.75rem);
+  display: flex;
+  flex-direction: column;
+  background: var(--navy);
 }
 
 .nav-link {
@@ -100,7 +91,8 @@ h1, h2, h3, .font-serif {
 .btn-bronze:hover { background: var(--paper); }
 
 .hero {
-  min-height: 100vh;
+  flex: 1;
+  min-height: 0;
   background-color: var(--navy);
   background-image: linear-gradient(180deg, rgba(11, 31, 58, 0.72), rgba(11, 31, 58, 0.86)), var(--hero);
   background-size: cover;
